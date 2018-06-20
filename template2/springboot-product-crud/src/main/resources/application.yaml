@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///mydb?useSSL=false
+    username: root
+    password: rootroot
+  redis:
+    host: 192.168.135.173
+    port: 6379
+  activemq:
+    broker-url: tcp://127.0.0.1:61616
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.kaishengit.entity
+  mapper-locations: classpath:mapper/*.xml
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
